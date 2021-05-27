@@ -1,0 +1,2 @@
+chmod -R 777 + nombreCarpeta/storage
+    ---> Permisos de alto nivel a la carpeta

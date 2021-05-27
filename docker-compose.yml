@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  db:
+    # db-nombreDataBase
+    container_name: db-zgamesusm
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    volumes:
+      # $PWD para linux - un ./ para windoes
+      - ./db-data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: zgamesusm_db # nombreDataBase_db
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: laravel1234
+    networks:
+      # net-nombreNet
+      - net-zgamesusm
+  web:
+    # nombreWeb-web
+    container_name: zgamesusm-web
+    depends_on:
+      - db
+    ports:
+      # puerto al que se conecta
+      - "1315:80"
+    volumes:
+      - "./web:/var/www/html"
+      - "./httpd.conf:/etc/httpd/conf/httpd.conf"
+    image: laravel-php8 # imagen con la que se trabaja
+    build:
+      context: .
+      dockerfile: Dockerfile # el archivo docker con la que trabaja
+    networks:
+      - net-zgamesusm
+networks:
+  net-zgamesusm:
+    
