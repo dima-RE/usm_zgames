@@ -21,6 +21,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                         <!-- <a class="nav-link active" aria-current="page" href="/">Home</a> -->
+                        <!-- referencia de las rutas web -->
                         <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                         <a class="nav-link" href="{{route('ver_consola')}}">Ver Consolas</a>
                         <a class="nav-link" href="{{route('ver_juegos')}}">Ver juegos</a>
@@ -35,12 +36,6 @@
         @yield("contenido")
         <!-- las paginas escriben en esta pagina-->
     </main>
-
-
-
-
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 

@@ -1,2 +1,16 @@
 chmod -R 777 + nombreCarpeta/storage
     ---> Permisos de alto nivel a la carpeta
+
+configuracion docker-compose.yml
+    Especificaciones en comentarios dentro del archivo.
+
+configuracion web routes/web.php
+    especificaciones en comentarios.
+
+configuracion de la vista MASTER de la web web\zgames/resources/views/layouts/master.blade.php
+    configuracion de la estructura del sitio web en general.
+    especificacion final en comentario.
+
+configuracion de las paginas web web\zgames/resources/views/*.blade.php
+    nombre debe coincidir con la especificacion en rutas web.php
+    diseñar las paginas
