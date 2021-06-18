@@ -24,3 +24,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //post -> ingresar una variable
 //Route::get("url", [Controlador::class, "metodo o funcion"]);
 Route::get("marcas/get", [ConsolasController::class, "getMarcas"]);
+
+Route::get("consolas/get", [ConsolasController::class, "getConsolas"]);
+
+Route::get("consolas/post", [ConsolasController::class, "crearConsola"]);
