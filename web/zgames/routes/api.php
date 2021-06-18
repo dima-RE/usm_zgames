@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+//importa el controlador
+use App\Http\Controllers\ConsolasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//get -> obtener una variable
+//post -> ingresar una variable
+//Route::get("url", [Controlador::class, "metodo o funcion"]);
+Route::get("marcas/get", [ConsolasController::class, "getMarcas"]);

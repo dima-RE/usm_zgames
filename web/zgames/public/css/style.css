@@ -1,0 +1,5 @@
+.logo{
+    /* imagen responsiva: solo debe definirse una dimension */
+    height: 70px;
+    width: auto;
+}

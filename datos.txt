@@ -14,3 +14,40 @@ configuracion de la vista MASTER de la web web\zgames/resources/views/layouts/ma
 configuracion de las paginas web web\zgames/resources/views/*.blade.php
     nombre debe coincidir con la especificacion en rutas web.php
     diseñar las paginas
+
+logo ----> web\zgames/public/img
+    crear carpeta img dentro de public
+
+frontend
+    js
+    css
+    html
+
+backend / server
+    php
+    data base
+
+conexion frontend y backend
+    AXIOS
+    uso de API REST
+    json
+
+routes 
+    ruta entre las direcciones y elementos
+    manera de llegar a la interfaz
+
+view 
+    elemento estatico
+    vista de la interfaz
+
+controller
+    logica de negocios / codigo de la aplicacion
+    logica de la interfaz
+    conexion con models
+
+models
+    por cada tabla, tengo un modelo
+    conexion/modificacion la base de datos
+
+crear controllador de consolas
+    php artisan make:controller NombreController
