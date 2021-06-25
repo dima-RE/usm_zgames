@@ -32,13 +32,19 @@ class ConsolasController extends Controller
     /**
      * registra consola de ejemplo en bd
      */
-    public function crearConsola(){
+    public function crearConsola(Request $request){
         // equivalente a insert into blah blah
+
+        $input = $request->all();
+
         $consola = new Consola();
-        $consola->nombre = "Nintendo";
-        $consola->marca = "Noentendo";
-        $consola->anno = "2006";
+        $consola->nombre = $input["nombre"];
+        $consola->marca = $input["marca"];
+        $consola->anno = $input["anno"];
 
         $consola->save();
+        return $consola;
     }
+
+    //falta contenido antes de las 19:20
 }
