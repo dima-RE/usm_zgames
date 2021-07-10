@@ -10,8 +10,12 @@ const cargarMarcas = async()=>{
         marcaSelect.appendChild(option);
     });
 }
+// ejecuta codigo, aseguranse de la carga completa de la pagina y recursos.
+document.addEventListener("DOMContentLoaded", ()=>{
+    cargarMarcas();
+})
 
-cargarMarcas();document.querySelector("#registrar-btn").addEventListener("click",async()=>{
+document.querySelector("#registrar-btn").addEventListener("click",async()=>{
     let nombre = document.querySelector("#nombre-txt").value;
     let marca = document.querySelector("#marca-select").value;
     let anno = document.querySelector("#anno-txt").value;
@@ -25,5 +29,8 @@ cargarMarcas();document.querySelector("#registrar-btn").addEventListener("click"
     //3 - el modelo ingresa en la base de datos
     let res = await crearConsola(consola);
 
-    Swal.fire("Listoko","Consola creada exitosamente","info");
+    await Swal.fire("Listoko","Consola creada exitosamente","info");
+    // La linea que viene despues del Swal se va a ejecutar solo cuando la persona aprete el OK
+    // Redirige a otra pagina.
+    window.location.href = "ver_consola";
 });

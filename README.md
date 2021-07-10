@@ -46,3 +46,15 @@
     php artisan make:model Nombre
 ``
 ## Importante siempre el nombre en SINGULAR
+
+
+
+
+## funciones window =
+    window = referencias de la ventana
+    windows.alert("texto") = alerta en ventana emergente
+    window.location = busca y entrega caracteristica del servidor
+    window.location.search = URL
+    window.location.hostname = Nombre del host
+    window.location.hred = URL completa. Tambien cambia entre paginas dentro de la web.
+    window.open("texto", "_blank") = abre una nueva pestanna
