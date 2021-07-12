@@ -46,5 +46,15 @@ class ConsolasController extends Controller
         return $consola;
     }
 
-    //falta contenido antes de las 19:20
+    public function eliminarConsola(Request $request){
+        $input = $request->all();
+        $id = $input["id"];
+        // Eloquent: administrador de BD de laravel.
+        // 1 - ir al registro en la BD
+        $consola = Consola::findOrFail($id); // laravel de hace cargo en caso de errores
+        // 2 - llamar al metodo delete
+        $consola->delete(); // equivalente a DELETE FROM consolas WHERE id=1
+        return "ok";
+    }
+
 }

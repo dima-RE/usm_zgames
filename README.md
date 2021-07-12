@@ -47,6 +47,13 @@
 ``
 ## Importante siempre el nombre en SINGULAR
 
+## Entorno de prueba en PHP
+```
+    php artisan tinker
+    
+    Example: route + command;
+```
+
 
 
 
