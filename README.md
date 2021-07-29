@@ -65,3 +65,47 @@
     window.location.hostname = Nombre del host
     window.location.hred = URL completa. Tambien cambia entre paginas dentro de la web.
     window.open("texto", "_blank") = abre una nueva pestanna
+
+##############################################################################
+################################ CLASE DEL 22 ################################
+##############################################################################
+
+...
+ ## MIGRACION DE UNA TABLA
+    buscar la tabla juegos y migrar
+
+crear tabla juegos ....
+    Schema create ...
+        $table->id();
+#        ///1. - definir los campos de  la tabla juegos
+#       // $table->tipoDato("nombre_dato")->primary(); se usa para crear la clave primaria.
+#       //https://laravel.com/docs/8.x/migrations#creating-indexes
+        table->string("nombre",100)
+        table->string("descripcion",200)
+        table->tinyInteger("apto_ninnos")->default(0)
+        table->integer("precio",)->unsigned()
+        table->date("fecha_lanzamiento");
+
+#        //Eloquent = aparecen los tipos de datos en https://laravel.com/docs/8.x/migrations#available-column-types
+#        //migrar un Boolean de un MySQL a un Oracle  se cae el programa
+#        //tinyInteger es más fácil de migrar
+#        // preferible usar lo más general que lo específico. (ejemplo, ni polygon ni boolean ni nada binario, pero varchar si)
+#        //tambien existen los modificadores, como default o unsigned
+
+#        //2. agregar la columna foranea
+#        //copia y pega de la otra tabla
+#        //las claves primarias de laravel (autoincrementales) por defecto sson bigInteger y unsigned
+        table-biginteger("consolaid)-unsigned()
+
+#        //3. agregar la relacion
+#        //alter table add constraint foreign key blah bla
+        tbale-foreign(consolaif)-references("id")-on(consolas)-onDelete(cascade)
+        //ondelete(restrict) es el default del cascade, no se puede borrar si tiene elementos asociados
+
+        table->timestamps();
+
+        ....
+## Definición de una tabla en español plural
+```
+    protected $table= "nombre_en_plural"
+```

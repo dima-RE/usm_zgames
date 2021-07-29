@@ -5,6 +5,7 @@ services:
     container_name: db-zgamesusm
     image: mysql:8.0
     ports:
+      # puerto del pc / puerto del server
       - "3306:3306"
     volumes:
       # $PWD para linux - un ./ para windoes
